@@ -1,7 +1,7 @@
 package org.example;
 
 import org.example.entities.RoomType;
-import org.example.entities.Service;
+import org.example.services.Service;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -25,7 +25,6 @@ public class Main {
             service.setUser(2, 10000);
         } catch (Exception e) {
             System.out.println("Error in test execution: " + e.getMessage());
-            e.printStackTrace();
         }
 
         try {
@@ -36,7 +35,7 @@ public class Main {
             service.bookRoom(1, 2, date1, date2);
         } catch (Exception e) {
             System.out.println("Error in test execution: " + e.getMessage());
-            e.printStackTrace();
+
         }
         try {
             // User 1 tries booking Room 2 from 07/07/2026 to 30/06/2026
@@ -45,7 +44,7 @@ public class Main {
             service.bookRoom(1, 2, date3, date4);
         } catch (Exception e) {
             System.out.println("Error in test execution: " + e.getMessage());
-            e.printStackTrace();
+
         }
 
         try {
@@ -56,7 +55,7 @@ public class Main {
 
         } catch (Exception e) {
             System.out.println("Error in test execution: " + e.getMessage());
-            e.printStackTrace();
+
         }
             // User 2 tries booking Room 1 from 07/07/2026 to 09/07/2026 (2 nights)
 
@@ -66,7 +65,6 @@ public class Main {
             service.bookRoom(2, 1, date7, date8);
          } catch (Exception e) {
              System.out.println("Error in test execution: " + e.getMessage());
-             e.printStackTrace();
          }
             // User 2 tries booking Room 3 from 07/07/2026 to 08/07/2026 (1 night)
             try {
@@ -75,7 +73,7 @@ public class Main {
             service.bookRoom(2, 3, date9, date10);
             } catch (Exception e) {
                 System.out.println("Error in test execution: " + e.getMessage());
-                e.printStackTrace();
+
             }
 
             try {
@@ -84,7 +82,7 @@ public class Main {
             service.setRoom(1, 10000, RoomType.DELUXE_SUITE);
             } catch (Exception e) {
                 System.out.println("Error in test execution: " + e.getMessage());
-                e.printStackTrace();
+
             }
             // Print results
             service.printAll();

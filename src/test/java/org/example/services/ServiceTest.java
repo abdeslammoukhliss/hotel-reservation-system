@@ -2,7 +2,6 @@ package org.example.services;
 
 import org.example.entities.Booking;
 import org.example.entities.RoomType;
-import org.example.entities.Service;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
