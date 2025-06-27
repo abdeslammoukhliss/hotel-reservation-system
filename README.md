@@ -32,17 +32,18 @@ hotel-reservation-system/
 │   ├── main/java/
 │   │   ├── org/example/
 │   │   │   └── Main.java
-│   │   └── org/example/entities/
-│   │       ├── Service.java
-│   │       ├── User.java
-│   │       ├── Room.java
-│   │       ├── Booking.java
-│   │       └── RoomType.java
+│   │   ├── org/example/entities/
+│   │   │   ├── User.java
+│   │   │   ├── Room.java
+│   │   │   ├── Booking.java
+│   │   │   └── RoomType.java
+│   │   └── org/example/services/
+│   │       └── Service.java
 │   └── test/java/
 │       └── org/example/services/
 │           └── ServiceTest.java
 ├── README.md
-└── pom.xml (if using Maven)
+└── pom.xml
 ```
 
 ## Requirements
@@ -210,6 +211,10 @@ Displays all users.
 | 5 | User 2 books Room 3 (1 night) | ✅ Success |
 | 6 | Update Room 1 | ❌ Room exists |
 
+### Results
+<p align="center">
+  <img src="images/results.png" alt="results" width="600"/>
+</p>
 ### JUnit Tests
 The project includes 11 comprehensive test cases covering:
 - User creation and validation
@@ -233,9 +238,9 @@ The project includes 11 comprehensive test cases covering:
 
 **Better Approach:**
 ```java
-UserService userService;      // User operations
-RoomService roomService;      // Room operations
-BookingService bookingService; // Booking logic
+UserService userService;     
+RoomService roomService;      
+BookingService bookingService; 
 ```
 
 **Benefits:**
@@ -278,21 +283,3 @@ BookingService bookingService; // Booking logic
 - Meets business requirements
 - Simple to implement and understand
 - Customers expect booking details to remain unchanged
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## License
-
-This project is created for educational purposes as part of Skypay Technical Test 2.
-
----
-
-**Project Status:** ✅ Complete
-**Test Coverage:** 100% method coverage
-**Last Updated:** 2024

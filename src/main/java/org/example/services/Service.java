@@ -1,4 +1,9 @@
-package org.example.entities;
+package org.example.services;
+
+import org.example.entities.Booking;
+import org.example.entities.Room;
+import org.example.entities.RoomType;
+import org.example.entities.User;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
